@@ -1,10 +1,15 @@
 import * as S from './styles'
 
-const Input = ({label}) => {
+const Input = ({label, placeHolder, valueOnChange, typeInput}) => {
     return(
         <S.InputWraper>
             <S.DescriptionInput>{label}</S.DescriptionInput>
-            <S.InputText/>
+            <S.InputText
+                placeholder={placeHolder}
+                required
+                onChange={valueOnChange}
+                type={typeInput}
+            />
         </S.InputWraper>
     );
 }

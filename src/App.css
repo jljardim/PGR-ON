@@ -1,11 +1,5 @@
 body {
-  background: -webkit-linear-gradient(left, #f5fbfb, #6983ee);
-  background: -moz-linear-gradient(left, #f5fbfb, #6983ee);
-  background: -ms-linear-gradient(left, #f5fbfb, #6983ee);
-  background: -o-linear-gradient(left, #f5fbfb, #6983ee);
-  background: linear-gradient(to right, #f5fbfb, #6983ee);
-  margin: 0%;
-  padding: 0%;
+  background-color: #f3f6f4;
 }
 .container_header {
   background: -webkit-linear-gradient(left, #f3f6f4, #f65107);

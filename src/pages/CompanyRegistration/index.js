@@ -7,17 +7,18 @@ import api from "../../services/api";
 import Swal from "sweetalert2";
 
 import * as S from './styles'
+import Button from "../../components/Buttons";
+import BackButton from "../../components/Buttons/BackButton";
+import { Link } from "react-router-dom";
 
 const CompanyRegistration =() => {
-    const teste =[{name:"CPF"}, {name:"CNPJ"}, {name:"RG"}] /*{cnpj:"CNPJ"}, {rg:"RG"}*/
+    const teste =[{name:"CPF"}, {name:"CNPJ"}] 
     const [opcoes, setOpcoes] = useState([]);
     const [documentoSelecionado, setDocumentoSelecionado] = useState([]);
     const [obterDocumentoSelecionado, setObterDocumentoSelecionado] = useState("");
 
    const handleGetMessagesChannels = async () => {
         try {
-        /*  const response = await api.get("/channels"); */
-
           const getChannelsFormatted = teste.map((item) => {
             return {
               label: item.name,
@@ -44,7 +45,6 @@ const CompanyRegistration =() => {
         setObterDocumentoSelecionado(event.target.value);
   };
 
-
     return (
 
         <S.ContainerHeaderWrap>
@@ -52,36 +52,49 @@ const CompanyRegistration =() => {
              h1Content="Cadastro de Empresa"
              h2Content="Empresa"
             />
-            <S.ContainerContentWrap>
+            <S.BackButtonWrap>
+              <Link to="/home">
+              <BackButton
+             titleBackButton= " &#8630; Voltar"    /* &#8604; */
+            />
+              </Link>
+            </S.BackButtonWrap>
+            <S.InputWrap>
             <Input
              label="Codigo"
            />
            <Input
-                label="Razão Social"
-                required="true"
+                label="Razão Social *"
+                placeHolder="Razão Social"
+                required
            />
           <Select
-            titleLabel="Tipo do Documento:"
+            titleLabel="Tipo do Documento *"
             value={obterDocumentoSelecionado}
             options={documentoSelecionado}
             onChange={handleOnChangeGatilho}
+            placeHolderName="Selecione o Tipo de Documento"
+            required
           /> 
           <Input
-            label="Local"
+            label="Local *"
+            placeHolder="Ex: Rua Jose, 111"
+            required
            />
-
-            </S.ContainerContentWrap>
-        
+            </S.InputWrap>
+          <S.ButtonWrap>
+          <Button
+            titleButton={"Novo Registro"}
+          />
+          <Button
+            titleButton={"Alterar"}
+          />
+          <Button
+            titleButton={"Excluir"}
+          />
+          </S.ButtonWrap>
             
-        </S.ContainerHeaderWrap>
-      
-
-    
-       
-            
-        
-        
-            
+        </S.ContainerHeaderWrap>          
     );
 }
 export default CompanyRegistration

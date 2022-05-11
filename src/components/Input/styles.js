@@ -9,7 +9,7 @@ export const InputWraper = styled.div`
 export const DescriptionInput  = styled.label`
     width: 900;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 5px;
 
 `
@@ -20,4 +20,5 @@ export const InputText = styled.input`
     outline: none;
     padding: 5px 10px;
     border: 1px solid #ced4da;
+    
 `
