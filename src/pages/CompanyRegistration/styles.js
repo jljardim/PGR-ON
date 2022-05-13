@@ -7,20 +7,22 @@ export const ContainerHeaderWrap = styled.div`
 
 `
 export const InputWrap = styled.div`
+    width: 1100px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
 
 `
 export const ButtonWrap = styled.div`
-    margin: 0px;
+    margin-left: 50px;
     padding: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 
 `
 export const BackButtonWrap = styled.div`

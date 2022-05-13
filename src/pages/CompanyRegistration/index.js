@@ -12,38 +12,18 @@ import BackButton from "../../components/Buttons/BackButton";
 import { Link } from "react-router-dom";
 
 const CompanyRegistration =() => {
-    const teste =[{name:"CPF"}, {name:"CNPJ"}] 
-    const [opcoes, setOpcoes] = useState([]);
-    const [documentoSelecionado, setDocumentoSelecionado] = useState([]);
-    const [obterDocumentoSelecionado, setObterDocumentoSelecionado] = useState("");
+    const optionDocumento =[{name:"CPF"}, {name:"CNPJ"}] 
+    const [codigo, setCodigo] = useState(0);
+    const [razaoSocial, setRazaoSocial] = useState([]);
+    const [tipoDocumento, setTipoDocumento] = useState("");
+    const [local, setLocal] = useState([]);
 
-   const handleGetMessagesChannels = async () => {
-        try {
-          const getChannelsFormatted = teste.map((item) => {
-            return {
-              label: item.name,
-              value: item.name,
-            };
-          });
-          setDocumentoSelecionado(getChannelsFormatted);
-        } catch (error) {
-            Swal.fire({
-              icon: "error",
-              title: "Mensagem",
-              text: "Error 404 /Channels tente novamente ou contate o suporte",
-            });
-        }
+    const typesDocument = optionDocumento.map((item) => {
+      return {
+        label: item.name,
+        value: item.name,
       };
-    
-        useEffect(() => {
-          handleGetMessagesChannels();
-        }, []);
-    
-
-    
-    const handleOnChangeGatilho = (event) => {
-        setObterDocumentoSelecionado(event.target.value);
-  };
+    });
 
     return (
 
@@ -55,46 +35,65 @@ const CompanyRegistration =() => {
             <S.BackButtonWrap>
               <Link to="/home">
               <BackButton
-             titleBackButton= " &#8630; Voltar"    /* &#8604; */
+             titleBackButton= " &#8630; Voltar" 
             />
-              </Link>
+            </Link>
             </S.BackButtonWrap>
+
             <S.InputWrap>
             <Input
              label="Codigo"
+             typeInput="text"
+             value={codigo}
+             valueOnChange={(event) => setCodigo(event.target.value)}
            />
            <Input
-                label="Razão Social *"
-                placeHolder="Razão Social"
-                required
+             label="Razão Social *"
+             placeHolder="Razão Social"
+             valueOnChange={(event) => setRazaoSocial(event.target.value)}
+             value={razaoSocial}
+             required
            />
           <Select
             titleLabel="Tipo do Documento *"
-            value={obterDocumentoSelecionado}
-            options={documentoSelecionado}
-            onChange={handleOnChangeGatilho}
+            value={tipoDocumento}
+            options={typesDocument}
+            onChange={(event) => setTipoDocumento(event.target.value)}
             placeHolderName="Selecione o Tipo de Documento"
             required
           /> 
           <Input
             label="Local *"
             placeHolder="Ex: Rua Jose, 111"
+            valueOnChange={(event) => setLocal(event.target.value)}
             required
            />
             </S.InputWrap>
+
           <S.ButtonWrap>
-          <Button
+           <Button
             titleButton={"Novo Registro"}
-          />
-          <Button
+           />
+           <Button
             titleButton={"Alterar"}
-          />
-          <Button
+           />
+           <Button
             titleButton={"Excluir"}
-          />
+           />
           </S.ButtonWrap>
-            
-        </S.ContainerHeaderWrap>          
+
+          <p>{`
+          Codigo: ${codigo} 
+          \n________\n 
+          Doc: ${tipoDocumento}
+          \n________\n 
+          Razão: ${razaoSocial}
+          \n________\n 
+          Local: ${local}
+          `}
+          </p>
+        </S.ContainerHeaderWrap>  
+          
     );
 }
 export default CompanyRegistration
