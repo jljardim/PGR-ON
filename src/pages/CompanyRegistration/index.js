@@ -77,12 +77,21 @@ const CompanyRegistration =() => {
           <S.ButtonWrap>
            <Button
             titleButton={"Novo Registro"}
+            width={"350px"}
+            height={"40px"}
+            background={"#DAA520"}
            />
            <Button
             titleButton={"Alterar"}
+            width={"350px"}
+            height={"40px"}
+            background={"#DAA520"}
            />
            <Button
             titleButton={"Excluir"}
+            width={"350px"}
+            height={"40px"}
+            background={"#DAA520"}
            />
           </S.ButtonWrap>
 

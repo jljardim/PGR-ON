@@ -5,6 +5,8 @@ import Table from '../../components/Table';
 import Input from "../../components/Input";
 import api from "../../services/api";
 import Swal from "sweetalert2";
+import Button from "../../components/Buttons";
+import { Link } from "react-router-dom";
 
 import * as S from './styles'
 
@@ -39,9 +41,49 @@ const Details =() => {
                 
                 <S.SideBar>
                     <ul>
-                        <li>sim</li>
-                        <li>não</li>
-                        <li>talvez</li>
+                        <li><Link to="/company">
+                        <Button
+                          titleButton={"Cadastro Empresa"}
+                          width={'120px'}
+                          background="#DAA520"
+                          fontSize={"8px"}
+                          height={"25px"}
+                         />
+                        </Link>
+                        </li>
+                        <li>
+                        <Link to="/register-colaborator">
+                        <Button
+                          titleButton={"Cadastro Colaborador"}
+                          width={'120px'}
+                          background="#DAA520"
+                          fontSize={"8px"}
+                          height={"25px"}
+                         />
+                        </Link>
+                        </li>
+                        <li>
+                        <Link to="/register-equipment">
+                        <Button
+                          titleButton={"Cadastro Equipamento"}
+                          width={'120px'}
+                          background="#DAA520"
+                          fontSize={"8px"}
+                          height={"25px"}
+                         />
+                        </Link>
+                        </li>
+                        <li>
+                        <Link to="/">
+                        <Button
+                          titleButton={"Sair"}
+                          width={'120px'}
+                          background="#DAA520"
+                          fontSize={"8px"}
+                          height={"25px"}
+                         />
+                        </Link>
+                        </li>
                     </ul>
                 </S.SideBar>
 

@@ -115,12 +115,21 @@ const CollaboratorRegistration = () => {
             <S.ButtonWrap>
            <Button
             titleButton={"Novo Registro"}
+            width={"300px"}
+            height={"40px"}
+            background={"#DAA520"}
            />
            <Button
             titleButton={"Alterar"}
+            width={"300px"}
+            height={"40px"}
+            background={"#DAA520"}
            />
            <Button
             titleButton={"Excluir"}
+            width={"300px"}
+            height={"40px"}
+            background={"#DAA520"}
            />
           </S.ButtonWrap>
             {`${codigo} -- ${empresaSelecionada} -- ${nome} -- ${cracha} -- ${pis} --${permissao}`}

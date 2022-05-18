@@ -52,6 +52,9 @@ const Login = () => {
                      <Link to="/details">
                      <Button
                      titleButton="Entrar"
+                     width={"350px"}
+                     height={"40px"}
+                     background={"#DAA520"}
                      />
                      </Link>
                 ): "Aguardando senha"}

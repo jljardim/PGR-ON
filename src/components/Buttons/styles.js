@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-    width: 350px;
-    height: 40px;
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
     color: #FFE4E1;
-    font-size: 16px;
+    font-size: ${(props) => props.fontSize};
     font-weight: bold;
     border-radius: 8px;
     border-color: #FFFFFF;
-    background-color: #DAA520;
+    background-color: ${(props) => props.background};
 
 
 `
