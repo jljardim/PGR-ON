@@ -3,10 +3,19 @@ import { Link } from "react-router-dom";
 import Button from "../../components/Buttons";
 import Header2 from "../../components/Header2";
 import Input from "../../components/Input";
+import Swal from "sweetalert2";
+import { useEffect } from "react/cjs/react.production.min";
 
 const Login = () => {
     const [user, setUser] = useState("")
     const [password, setPassword] = useState("");
+
+  /*  const start= Swal.fire({
+      icon:"info",
+      title:"Bem vindo ao PRG ON, seu gerenciador de relogio de ponto on-line ",
+      text: "Por favor informe o usuario e senha para prosseguir",
+    }); */
+
 
     const handleOnChangeUser = (event) => {
         setUser(event.target.value);

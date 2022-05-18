@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SelectWrap = styled.div`
+   width: auto;
    padding-top: 5px;
    display: flex;
    flex-direction: column; 

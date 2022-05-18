@@ -85,24 +85,23 @@ body {
   font-size: 16px;
 }
 .table tr th {
-  width: 500px;
+  width: 200px;
   height: 35px;
-  background: -webkit-linear-gradient(left, #f3f6f4, #f65107);
-  background: -moz-linear-gradient(left, #f3f6f4, #f65107);
-  background: -ms-linear-gradient(left, #f3f6f4, #f65107);
-  background: -o-linear-gradient(left, #f3f6f4, #f65107);
-  background: linear-gradient(to right, #f3f6f4, #f65107);
+  color: #6983ee;
   border: #000 solid 1px;
+  justify-content: center;
 }
 .table tr td {
   height: 30px;
-  background: -webkit-linear-gradient(left, #f5fbfb, #6983ee);
-  background: -moz-linear-gradient(left, #f5fbfb, #6983ee);
-  background: -ms-linear-gradient(left, #f5fbfb, #6983ee);
-  background: -o-linear-gradient(left, #f5fbfb, #6983ee);
-  background: linear-gradient(to right, #f5fbfb, #6983ee);
+  color: burlywood;
   border: #000 solid 1px;
   height: 30px;
+  align-items: center;
+  
+}
+.table td {
+  justify-items: center;
+  align-items: center;
 }
 .Link {
   color: blue;
@@ -180,4 +179,17 @@ body {
 .label_select_message select {
   height: 100px;
   width: 900px;
+}
+.divTeste2 {
+  background-color: #DAA520;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.divTeste2 h2 {
+  font-size: 15px;
+  align-items: center;
+  margin: 0px;
+  
 }

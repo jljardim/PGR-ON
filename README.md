@@ -71,3 +71,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### `npm run server`  
 Esse comando é usado para subir o o json-server para teste
+
+### `Bibliotecas Usadas`
+styled-components -> Foi usado para estilizar os componentes
+sweetalert2 -> foi usado para os modals de informação ao usuario
+react-dom -> Foi usado para fazer o roteamento da aplicação
+json-server -> Foi usado para testar o front enquanto o backend não está pronto
+axios -> para criar a rota padrão de consumo das apis
+
+### `Requisitos Necessarios para rodar a aplicação`
+` 1° Ter o git instalado na maquina`
+` 2° Ter o node instalado noi minimo ter a versão 12`
+` 3° Fazer o clone o projeto no github ou baixar o zip do projeto em: https://github.com/jljardim/PGR-ON.git`
+` 4° Após fazer o clone do projeto ir para a pasta raiz via terminal e rodar o comando "npm install" e depois "npm start" `
+

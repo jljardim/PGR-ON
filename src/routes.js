@@ -4,7 +4,6 @@ import CompanyRegistration from "./pages/CompanyRegistration";
 import Dashboard from "./pages/Dashboard";
 import EquipamentRegistration from "./pages/EquipmentRegistration";
 import Details from "./pages/Details";
-import Home from "./pages/Details";
 import Login from "./pages/Login";
 import Message from "./pages/Messages";
 import Register from "./pages/Register";

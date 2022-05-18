@@ -17,6 +17,7 @@ const CompanyRegistration =() => {
     const [razaoSocial, setRazaoSocial] = useState([]);
     const [tipoDocumento, setTipoDocumento] = useState("");
     const [local, setLocal] = useState([]);
+    const [mensagem, setMensagem] = useState();
 
     const typesDocument = optionDocumento.map((item) => {
       return {
@@ -26,14 +27,15 @@ const CompanyRegistration =() => {
     });
 
     return (
-
+            
         <S.ContainerHeaderWrap>
+            
              <Header2
              h1Content="Cadastro de Empresa"
              h2Content="Empresa"
             />
             <S.BackButtonWrap>
-              <Link to="/home">
+              <Link to="/details">
               <BackButton
              titleBackButton= " &#8630; Voltar" 
             />
@@ -43,6 +45,7 @@ const CompanyRegistration =() => {
             <S.InputWrap>
             <Input
              label="Codigo"
+             placeHolder="Informe um codigo do tipo numerico"
              typeInput="text"
              value={codigo}
              valueOnChange={(event) => setCodigo(event.target.value)}
@@ -60,6 +63,7 @@ const CompanyRegistration =() => {
             options={typesDocument}
             onChange={(event) => setTipoDocumento(event.target.value)}
             placeHolderName="Selecione o Tipo de Documento"
+            placeHolderOption={"Selecione o tipo do documento"}
             required
           /> 
           <Input
@@ -92,7 +96,9 @@ const CompanyRegistration =() => {
           Local: ${local}
           `}
           </p>
+          
         </S.ContainerHeaderWrap>  
+        
           
     );
 }

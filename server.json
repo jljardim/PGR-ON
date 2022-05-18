@@ -2,24 +2,38 @@
   "messages": [
     {
       "id": 1,
-      "channel": "sms",
-      "trigger": "abertura_conta",
-      "timer": "15:00",
-      "message": " Ok realizado com  sucesso"
+      "codigo": "1",
+      "razao": "Avon.Ltda",
+      "documento": "21.0065.033-65",
+      "local": " Rua Jose Prestes, 295"
     },
     {
       "id": 21,
-      "channel": "sms",
-      "trigger": "fez_pix",
-      "timer": "5:00",
-      "message": " Na correria do dia a dia a Oi Conta Zap te ajuda a lembrar de algumas coisinhas! Ja conseguiu pagar seu boleto? Se sim, desconsidere a mensagem"
+      "codigo": "2",
+      "razao": "Amazon.com",
+      "documento": "000.000.000.00",
+      "local": "Rua Amazonia , 500"
     },
     {
-      "id": 1,
-      "channel": "whatsapp",
+      "id": 22,
+      "codigo": "3",
+      "razao": "Julio Simões.eirelli",
+      "documento": "010.100.111.11",
+      "local": "Rua Simões Alagados, 3500"
+    },
+    {
+      "id": 23,
+      "codigo": "4",
+      "razao": "Arbinb.com",
+      "documento": "111.222.333.44",
+      "local": "Rua Faria Lima, 3200"
+    },
+    {
+      "channel": "email",
       "trigger": "abertura_conta",
-      "timer": "73:00",
-      "message": " Na correria do dia a dia a Oi Conta Zap te ajuda a lembrar de algumas coisinhas! Ja conseguiu pagar seu boleto? Se sim, desconsidere a mensagem"
+      "timer": "14:00",
+      "message": "okokok",
+      "id": 24
     },
     {
       "id": 1631312843768,
@@ -41,20 +55,6 @@
       "timer": "11:00",
       "message": "Parabéns chave pix cadastrado com sucesso !!",
       "id": 1631313726739
-    },
-    {
-      "channel": "email",
-      "trigger": "fex_transferencia_outro_banco",
-      "timer": "12:00",
-      "message": "Recebemos sua solicitação de transferencia dentro e alguns instantes você recebera um email ",
-      "id": 1631313726740
-    },
-    {
-      "channel": "whatsapp",
-      "trigger": "recarregou_celular",
-      "timer": "13:00",
-      "message": "Comprei algo",
-      "id": 1631313726741
     }
   ],
   "channels": [
@@ -107,6 +107,23 @@
     {
       "id": 9,
       "name": "falou_com_atendimento"
+    }
+  ],
+  "empresa": [
+    {
+      "id": 1,
+      "name": "Avon.LTDA"
+    },
+    {
+      "id": 2,
+      "name": "Amazon.com"
+    },
+    {
+      "id": 3,
+      "name": "Julio Simões.eirelli"
+    }, {
+      "id": 4,
+      "name": "Arbinb.com"
     }
   ]
 }

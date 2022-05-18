@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 export const ContainerHeaderWrap = styled.div`
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 `
 export const InputWrap = styled.div`
-    width: 1100px;
+    width: auto;
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -17,6 +18,7 @@ export const InputWrap = styled.div`
 
 `
 export const ButtonWrap = styled.div`
+    width: auto;
     margin-left: 50px;
     padding: 50px;
     display: flex;
@@ -27,7 +29,7 @@ export const ButtonWrap = styled.div`
 `
 export const BackButtonWrap = styled.div`
     padding: 15px;
-    margin-left: 50px;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: left;

@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import Select from "../../components/Select";
 
 const Message = () => {
+
   const [gatilhoSelected, setGatilhoSelected] = useState("");
   const [canalSelected, setCanalSelected] = useState("");
   const [timerSelected, setTimerSelected] = useState("");

@@ -1,6 +1,6 @@
 import * as S from './styles'
 
-const Select = ({titleLabel, options, value, onChange, placeHolderName}) => {
+const Select = ({titleLabel, options, value, onChange, placeHolderName, placeHolderOption}) => {
     return (
       <>
       <S.SelectWrap>
@@ -11,7 +11,7 @@ const Select = ({titleLabel, options, value, onChange, placeHolderName}) => {
          placeholder={placeHolderName}
          className="label_select_message"
          >
-          <option value="" disabled selected>Selecione o Tipo de Documento</option>
+          <option value="" disabled selected>{placeHolderOption}</option>
           {options.map((option) => (
             <>
               <option key={option.value} value={option.value}>
