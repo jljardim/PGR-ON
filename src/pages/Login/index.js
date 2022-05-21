@@ -6,16 +6,11 @@ import Input from "../../components/Input";
 import Swal from "sweetalert2";
 import { useEffect } from "react/cjs/react.production.min";
 
+import * as S from '../CompanyRegistration/styles'
+
 const Login = () => {
     const [user, setUser] = useState("")
     const [password, setPassword] = useState("");
-
-  /*  const start= Swal.fire({
-      icon:"info",
-      title:"Bem vindo ao PRG ON, seu gerenciador de relogio de ponto on-line ",
-      text: "Por favor informe o usuario e senha para prosseguir",
-    }); */
-
 
     const handleOnChangeUser = (event) => {
         setUser(event.target.value);
@@ -27,7 +22,8 @@ const Login = () => {
 
     return (
         
-        <div className="login-container">    
+        <S.ContainerHeaderWrap>   
+        
                 <Header2
                  h1Content="PGR ON"
                  h2Content="Programa Gerenciador de Rélogio Online"
@@ -38,6 +34,8 @@ const Login = () => {
                     value={user}
                     valueOnChange={handleOnChangeUser} 
                     typeInput="text"
+                    width={"200px"}
+                    height={"30px"}
                     
                 />
                 <Input 
@@ -46,20 +44,28 @@ const Login = () => {
                   value={password}
                   valueOnChange={handleOnChangePassword}
                   typeInput="password"
+                  width={"200px"}
+                  height={"30px"}
                   
                 />
-                {user === "user" && password === "123456" ? (
+              
+
+              <S.ButtonWrap>
+              {user === "user" && password === "123456" ? (
                      <Link to="/details">
                      <Button
                      titleButton="Entrar"
-                     width={"350px"}
+                     width={"230px"}
                      height={"40px"}
-                     background={"#DAA520"}
+                     fontSize={"18px"}
                      />
                      </Link>
                 ): "Aguardando senha"}
+
+              </S.ButtonWrap>
            
-        </div>
+              </S.ContainerHeaderWrap>
+        
         
     );
 }

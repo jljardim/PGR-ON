@@ -58,11 +58,11 @@ const CollaboratorRegistration = () => {
              h2Content="Colaborador"
             />
             <S.BackButtonWrap>
-                <Link to="/details">
-                    <BackButton
-                        titleBackButton= " &#8630; Voltar"
-                    />
-                </Link>
+              <Link to="/details">
+                <BackButton
+                  titleBackButton= " &#8630; Voltar"
+                />
+              </Link>
             </S.BackButtonWrap>
             <S.InputWrap>
             <Input
@@ -102,7 +102,7 @@ const CollaboratorRegistration = () => {
              value={pis}
              valueOnChange={(event) => setPis(event.target.value)}
            />
-               <Select
+           <Select
             titleLabel="Permissão de Acesso/REP*"
             value={permissao}
             options={typesPermission}
@@ -110,28 +110,18 @@ const CollaboratorRegistration = () => {
             placeHolderName="Selecione a Empresa"
             placeHolderOption="Selecione a empresa"
             required
-          />
-            </S.InputWrap>
-            <S.ButtonWrap>
+           />
            <Button
             titleButton={"Novo Registro"}
-            width={"300px"}
-            height={"40px"}
-            background={"#DAA520"}
            />
            <Button
             titleButton={"Alterar"}
-            width={"300px"}
-            height={"40px"}
-            background={"#DAA520"}
            />
            <Button
             titleButton={"Excluir"}
-            width={"300px"}
-            height={"40px"}
-            background={"#DAA520"}
            />
-          </S.ButtonWrap>
+           </S.InputWrap>
+
             {`${codigo} -- ${empresaSelecionada} -- ${nome} -- ${cracha} -- ${pis} --${permissao}`}
         </S.ContainerHeaderWrap>
     );

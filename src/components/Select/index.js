@@ -1,38 +1,46 @@
 import * as S from './styles'
 
-const Select = ({titleLabel, options, value, onChange, placeHolderName, placeHolderOption}) => {
+const Select = ({titleLabel, options, value, onChange, placeHolderName, placeHolderOption,
+     fontSize, fontWeight, width, height, paddingTop, display, flexDirection}) => {
     return (
-      <>
-      <S.SelectWrap>
-        <S.Label>{titleLabel}</S.Label>
+        <>
+        <S.SelectWrap
+        width={width}
+        paddingTop={paddingTop}
+        display={display}
+        flexDirection={flexDirection}
+        >
+        <S.Label
+        fontSize={fontSize}
+        fontWeight={fontWeight}
+        >
+        {titleLabel}
+        </S.Label>
         <S.Select 
-        value={value}
+         value={value}
          onChange={onChange}
          placeholder={placeHolderName}
-         className="label_select_message"
+         width={width}
+         height={height}
          >
-          <option value="" disabled selected>{placeHolderOption}</option>
+         <S.Option 
+          value="" disabled selected 
+         >
+          {placeHolderOption}
+         </S.Option>
           {options.map((option) => (
-            <>
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            </>
+         <>
+         <S.Option 
+           key={option.value} 
+           value={option.value}
+         >
+          {option.label}
+         </S.Option>
+         </>
           ))}
-        </S.Select>
-     { /*  <select value={value} onChange={onChange} className="label_select_message">
-          <option className="label_select_message"></option>
-          {options.map((option) => (
-            <>
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            </>
-          ))}
-          </select> */}
-        </S.SelectWrap>
-      </>
-      
+         </S.Select>
+         </S.SelectWrap>
+         </>
     );
 }
 

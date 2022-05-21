@@ -13,7 +13,6 @@ import * as S from '../CompanyRegistration/styles'
 
 const EquipamentRegistration = () => {
 
-    const testePermissao =[{name:"usuario"}, {name:"administrador"}]
     const biometriaOption =[{name:"não utiliza biometria"}, {name:"utiliza biometria"}] 
     const codinAtivo =[{name:"Ativo"}, {name:"Inativo"}] 
     const [codigo, setCodigo] = useState(0);
@@ -27,7 +26,6 @@ const EquipamentRegistration = () => {
     const [firmware, setFirmware] = useState("");
     const [codin, setCodin] = useState("");
     const [empresa, setGetEmpresa] = useState([]);
-    
     
       const typesBiometria = biometriaOption.map((item) => {
         return {
@@ -153,28 +151,17 @@ const EquipamentRegistration = () => {
        onChange={(event) => setCodin(event.target.value)}
        placeHolderOption="Selecione o Status"
        required
-     />
-       </S.InputWrap>
-       <S.ButtonWrap>
+      />
       <Button
        titleButton={"Novo Registro"}
-       width={"300px"}
-       height={"40px"}
-       background={"#DAA520"}
       />
       <Button
        titleButton={"Alterar"}
-       width={"300px"}
-       height={"40px"}
-       background={"#DAA520"}
       />
       <Button
        titleButton={"Excluir"}
-       width={"300px"}
-       height={"40px"}
-       background={"#DAA520"}
       />
-     </S.ButtonWrap>
+       </S.InputWrap>
        {`${codigo} -- ${empresaSelecionada} -- ${descricao} -- ${ip} -- ${confBiometrico} --${aplicativo}`}
    </S.ContainerHeaderWrap>
     );

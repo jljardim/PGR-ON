@@ -17,7 +17,6 @@ const CompanyRegistration =() => {
     const [razaoSocial, setRazaoSocial] = useState([]);
     const [tipoDocumento, setTipoDocumento] = useState("");
     const [local, setLocal] = useState([]);
-    const [mensagem, setMensagem] = useState();
 
     const typesDocument = optionDocumento.map((item) => {
       return {
@@ -72,28 +71,17 @@ const CompanyRegistration =() => {
             valueOnChange={(event) => setLocal(event.target.value)}
             required
            />
-            </S.InputWrap>
-
-          <S.ButtonWrap>
-           <Button
+              <Button
             titleButton={"Novo Registro"}
-            width={"350px"}
-            height={"40px"}
-            background={"#DAA520"}
+            
            />
            <Button
             titleButton={"Alterar"}
-            width={"350px"}
-            height={"40px"}
-            background={"#DAA520"}
            />
            <Button
             titleButton={"Excluir"}
-            width={"350px"}
-            height={"40px"}
-            background={"#DAA520"}
            />
-          </S.ButtonWrap>
+            </S.InputWrap>
 
           <p>{`
           Codigo: ${codigo} 

@@ -94,14 +94,17 @@ const Details =() => {
                  <div className='divTeste2'>
                    <h2>Novo cadastro</h2>
                  </div>
-                  <Input
-                  label="Buscar"
+                 <S.Busca>
+                 <Input
+                  label="Buscar:"
                   typeInput="text"
                   value={filtro}
                   valueOnChange={(event) => setFiltro(event.target.value)}
+                  flexDirection={"row"}
+                  onKeyCapture={handleOnClick}
                 />
-                   <button onClick={handleOnClick}>Pesquisar</button>
-
+                 </S.Busca>
+          
                    <table className="table">
                      <thead>
                        <tr>
@@ -130,7 +133,6 @@ const Details =() => {
                    </table>
                 </S.TableWraper>
             </S.ContentWraper>
-        {filtro}
         </S.DetailsWraper>
 
            
