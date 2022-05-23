@@ -35,10 +35,7 @@ const Details =() => {
 
     return (
         
-        <S.DetailsWraper>
-          
             <S.ContentWraper>
-                
                 <S.SideBar>
                     <ul>
                         <li><Link to="/company">
@@ -86,14 +83,19 @@ const Details =() => {
                         </li>
                     </ul>
                 </S.SideBar>
-
                 <S.TableWraper>
                 <Header2 
                 h1Content="Empresa"
                  />
-                 <div className='divTeste2'>
-                   <h2>Novo cadastro</h2>
-                 </div>
+                  <Link to="/company">
+                    <Button
+                      titleButton={"Novo Cadastro"}
+                      width={'400px'}
+                      background="#DAA520"
+                      fontSize={"16px"}
+                      height={"35px"}
+                  />
+                 </Link>
                  <S.Busca>
                  <Input
                   label="Buscar:"
@@ -102,6 +104,7 @@ const Details =() => {
                   valueOnChange={(event) => setFiltro(event.target.value)}
                   flexDirection={"row"}
                   onKeyCapture={handleOnClick}
+                  placeHolder="faça uma busca"
                 />
                  </S.Busca>
           
@@ -133,7 +136,6 @@ const Details =() => {
                    </table>
                 </S.TableWraper>
             </S.ContentWraper>
-        </S.DetailsWraper>
 
            
     );
